@@ -1,0 +1,125 @@
+.task {
+  background: var(--gray-500);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--gray-400);
+  
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: .75rem;
+}
+
+.task + .task {
+  margin-top: 1rem;
+}
+
+.taskUnckecked {
+  border-color: var(--gray-400);
+}
+
+.taskChecked {
+  border-color: var(--gray-500);
+}
+
+.textUnchecked {
+  font-size: .875rem;
+  color: var(--gray-100);
+}
+
+.textChecked {
+  font-size: .875rem;
+  color: var(--gray-300);
+  text-decoration: line-through;
+}
+
+.checkbox {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: none;
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.checkbox svg {
+  width: .7rem;
+}
+
+.radioUnchecked {
+  background: none;
+ 
+  width: 1.125rem;
+  height: 1.125rem;
+           
+  border: 2px solid var(--blue);
+  border-radius: 50%;
+  
+  position: relative;
+}
+
+.radioUnchecked:before {
+  content: '';
+  background: var(--blue-dark);
+  opacity: .2;
+ 
+  display: none;
+  position: absolute;
+
+  width: .90rem;
+  height: .90rem;
+  border-radius: 50%;
+}
+
+.radioUnchecked:hover {
+  border-color: var(--blue-dark);
+}
+
+.radioUnchecked:hover::before {
+  display: block;
+}
+
+.radioChecked {
+  width: 1.125rem;
+  height: 1.125rem;
+  border-radius: 50%;
+
+  background: var(--purple-dark);
+
+  display: flex;
+  justify-content: center;
+}
+
+.radioChecked:hover {
+  background: var(--purple);
+}
+
+.delete {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  padding: .3rem;
+
+  border-radius: 4px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete svg {
+  width: .875rem;
+}
+
+.delete:hover {
+  background: var(--gray-400);
+}
+
+.delete:hover svg path{
+  fill: var(--red);
+}
